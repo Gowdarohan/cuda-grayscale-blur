@@ -1,2 +1,3 @@
-*.cu linguist-language=Cuda
-*.cuh linguist-language=Cuda
+*.cu linguist-language=C++
+*.cuh linguist-language=C++
+*.py linguist-vendored
