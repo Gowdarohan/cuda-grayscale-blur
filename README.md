@@ -41,18 +41,14 @@ The project demonstrates parallel image processing using custom CUDA kernels for
 # Project Structure
 
 ```bash
-cuda-image-processing/
+cuda-grayscale-blur/
 │
 ├── main.py
 ├── gaussian_processing.cu
-├── README.md
+├── gaussian_kernels.cuh
 ├── requirements.txt
-│
-├── outputs/
-│   ├── grayscale.png
-│   ├── blurred.png
-│   ├── grayscale_then_blur.png
-│   └── blur_then_grayscale.png
+├── README.md
+└── .gitattributes
 ```
 
 ---
