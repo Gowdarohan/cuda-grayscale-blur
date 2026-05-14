@@ -190,7 +190,7 @@ Used to compare execution performance and processing order effects.
 
 # Author
 
-**ROHAN J GOWDA**
+**ROHAN J**
 
 ---
 
