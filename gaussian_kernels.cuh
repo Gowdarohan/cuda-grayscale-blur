@@ -59,3 +59,25 @@ __global__ void rgbToGrayscaleKernel(
         Pout[idx] = (unsigned char)(0.21f * r + 0.71f * g + 0.07f * b);
     }
 }
+
+// kernel for edge sharpening the image
+__global__ void edge_sharpining(unsigned char* Pin, unsigned char* Pout, int width, int height){
+
+    int col = blockIdx.x*blockDim.x + threadIdx.x;
+    int row = blockIdx.y*blockDim.y + threadIdx.y;
+
+    if(col > 0 && col < width - 1 && row > 0 && row < height - 1){
+        int top = Pin[(row-1)*width + col];
+        int bottom = Pin[(row + 1)*width + col];
+        int left = Pin[row*width + (col-1)];
+        int right = Pin[row*width + (col + 1)];
+        int center = Pin[row*width + col];
+
+        int value = 5*center - top - bottom - left - right;
+        value = max(0,min(255,value));
+        Pout[row*width + col] = (unsigned char)value;
+    }
+    else{
+        Pout[row*width + col] = Pin[row*width + col];
+    }
+}

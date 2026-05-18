@@ -92,26 +92,6 @@ The project compares execution times for different image operations on GPU.
 
 ---
 
-# Installation
-
-## Clone Repository
-
-```bash
-git clone https://github.com/your-username/cuda-image-processing.git
-
-cd cuda-image-processing
-```
-
----
-
-## Install Dependencies
-
-```bash
-pip install torch torchvision matplotlib pillow numpy requests ninja
-```
-
----
-
 # Requirements
 
 - NVIDIA GPU
@@ -125,24 +105,7 @@ Check CUDA availability:
 import torch
 print(torch.cuda.is_available())
 ```
-
 ---
-
-# Run the Project
-
-```bash
-python main.py
-```
-
-Then:
-
-1. Enter image URL or local image path
-2. Enter Gaussian blur kernel size
-3. CUDA kernels compile automatically
-4. Results and performance charts are displayed
-
----
-
 # CUDA Operations Implemented
 
 ## 1. Gaussian Blur
