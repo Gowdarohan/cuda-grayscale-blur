@@ -139,7 +139,6 @@ Used to compare execution performance and processing order effects.
 # Future Improvements
 
 - Edge detection filters
-- Sharpening filters
 - Video frame processing
 - Real-time webcam support
 - CUDA shared memory optimization
